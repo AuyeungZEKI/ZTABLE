@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { width:100%; height:100%; overflow:hidden; }
+body { background:rgba(8,10,14,.35); display:grid; place-items:center; font-family:"Segoe UI Variable Text","Segoe UI","Microsoft YaHei UI",sans-serif; }
+.hint { position:fixed; bottom:38px; left:50%; transform:translateX(-50%); color:#fff; background:rgba(20,22,28,.82);
+  backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,.16); padding:9px 16px; border-radius:12px;
+  font-size:12.5px; letter-spacing:.2px; box-shadow:0 10px 34px rgba(0,0,0,.45); display:flex; gap:10px; align-items:center; }
+kbd { background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.22); border-bottom-width:2px; border-radius:5px; padding:2px 7px; font:600 11px/1.4 inherit; }
+.dot { width:6px; height:6px; border-radius:3px; background:#3B82F6; box-shadow:0 0 10px #3B82F6; }
+</style></head>
+<body><div class="hint"><span class="dot"></span><span id="t">速览模式 · 再次按下快捷键或 <kbd>Esc</kbd> 退出</span></div>
+<script src="dim.js"></script></body></html>

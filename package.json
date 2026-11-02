@@ -1,0 +1,93 @@
+{
+  "name": "ztable",
+  "productName": "ZTABLE",
+  "version": "1.0.1",
+  "description": "ZTABLE - Windows 11 桌面整理工具",
+  "author": "ZTABLE",
+  "license": "UNLICENSED",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64",
+    "dist:arm64": "electron-builder --win nsis --arm64"
+  },
+  "dependencies": {
+    "koffi": "^3.3.3"
+  },
+  "devDependencies": {
+    "electron": "^44.9.1",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.ztable.desktop",
+    "productName": "ZTABLE",
+    "copyright": "Copyright © 2026 ZTABLE",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "!src/selftest.js",
+      "renderer/**/*",
+      "assets/*.png",
+      "assets/*.ico",
+      "assets/privacy.md",
+      "package.json",
+      "!assets/logo_source.png"
+    ],
+    "asarUnpack": [
+      "node_modules/koffi/**/*",
+      "node_modules/@koromix/**/*",
+      "src/hook.js",
+      "src/win32.js",
+      "src/hotkeys.js"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "executableName": "ZTABLE",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "installerSidebar": "build/installerSidebar.bmp",
+      "uninstallerSidebar": "build/uninstallerSidebar.bmp",
+      "installerHeader": "build/installerHeader.bmp",
+      "license": "build/license.rtf",
+      "include": "build/installer.nsh",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "ZTABLE",
+      "uninstallDisplayName": "ZTABLE 桌面整理",
+      "artifactName": "ZTABLE_Setup_${version}_${arch}.exe",
+      "language": "2052",
+      "installerLanguages": [
+        "zh_CN"
+      ],
+      "multiLanguageInstaller": true,
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "unicode": true
+    },
+    "extraResources": [
+      {
+        "from": "assets/privacy.md",
+        "to": "privacy.txt"
+      }
+    ]
+  }
+}

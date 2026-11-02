@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+<title>ZTABLE 设置</title>
+<link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+<header class="titlebar">
+  <img src="../assets/mark128.png" class="tb-logo" alt="" />
+  <span class="tb-name">ZTABLE</span>
+  <span class="tb-sub">桌面整理</span>
+</header>
+<div class="shell">
+  <nav class="nav" id="nav">
+    <a data-page="home"><i>⌂</i>概览</a>
+    <a data-page="fences"><i>▦</i>围栏与外观</a>
+    <a data-page="rules"><i>⚑</i>自动归类</a>
+    <a data-page="portals"><i>⧉</i>文件夹门户</a>
+    <a data-page="quickhide"><i>◐</i>快速隐藏</a>
+    <a data-page="peek"><i>⌘</i>速览与快捷键</a>
+    <a data-page="displays"><i>▭</i>显示器</a>
+    <a data-page="general"><i>⚙</i>通用</a>
+    <div class="nav-sp"></div>
+    <a data-page="about"><i>ⓘ</i>关于</a>
+  </nav>
+  <main class="content" id="content"></main>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal-bg" id="modalBg"><div class="modal" id="modal"></div></div>
+<script src="settings.js"></script>
+</body>
+</html>

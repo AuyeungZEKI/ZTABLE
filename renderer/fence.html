@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+<title>ZTABLE</title>
+<link rel="stylesheet" href="fence.css" />
+</head>
+<body class="theme-light">
+<div id="root" class="fence">
+  <div id="title" class="title">
+    <div class="t-left">
+      <span id="tIcon" class="t-icon"></span>
+      <span id="tName" class="t-name">围栏</span>
+      <span id="tCount" class="t-count">0</span>
+    </div>
+    <div class="t-right">
+      <button id="btnBack" class="t-btn" title="返回上一级">‹</button>
+      <button id="btnOpenFolder" class="t-btn" title="在资源管理器中打开">⤢</button>
+      <button id="btnRoll" class="t-btn" title="卷起 / 展开">⌃</button>
+    </div>
+  </div>
+  <div id="body" class="body">
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty">
+      <div class="empty-ico">＋</div>
+      <div class="empty-t">把文件拖到这里</div>
+      <div class="empty-s">或将桌面图标拖入围栏</div>
+    </div>
+    <div id="crumb" class="crumb"></div>
+  </div>
+  <div class="rz rz-n" data-edge="n"></div><div class="rz rz-s" data-edge="s"></div>
+  <div class="rz rz-w" data-edge="w"></div><div class="rz rz-e" data-edge="e"></div>
+  <div class="rz rz-nw" data-edge="nw"></div><div class="rz rz-ne" data-edge="ne"></div>
+  <div class="rz rz-sw" data-edge="sw"></div><div class="rz rz-se" data-edge="se"></div>
+</div>
+<script src="fence.js"></script>
+</body>
+</html>
